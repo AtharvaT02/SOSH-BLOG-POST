@@ -33,7 +33,7 @@ describe('Blog API', () => {
   describe('Update blog', () => {
     it('should return 401 if user is not logged in', (done) => {
       request(app)
-        .put('/api/blog/update/91b6613c-70eb-486b-b068-f7f16f50dd69')
+        .put('/api/blog/update/9c463b01-a9ef-424d-b140-d640115d1828')
         .send({ title: 'Test Blog', description: 'Test Description' })
         .expect(401, done);
     });    
@@ -48,7 +48,7 @@ describe('Blog API', () => {
           const token = res.body;
           // Update the blog post
           request(app)
-            .put('/api/blog/update/91b6613c-70eb-486b-b068-f7f16f50dd69')
+            .put('/api/blog/update/9c463b01-a9ef-424d-b140-d640115d1828')
             .set('Authorization', `Bearer ${token}`)
             .send({ title: 'Test Blog', description: 'Test Description' })
             .expect(200)
@@ -60,7 +60,7 @@ describe('Blog API', () => {
   describe('Delete blog', () => {
     it('should return 401 if user is not logged in', (done) => {
         request(app)
-            .delete('/api/blog/delete/91b6613c-70eb-486b-b068-f7f16f50dd69')
+            .delete('/api/blog/delete/9c463b01-a9ef-424d-b140-d640115d1828')
             .expect(401, done);
     });
     it('should return 200 and the deleted blog if user is logged in', (done) => {
@@ -74,7 +74,7 @@ describe('Blog API', () => {
                 const token = res.body;
                 // Delete the blog post
                 request(app)
-                    .delete('/api/blog/delete/91b6613c-70eb-486b-b068-f7f16f50dd69')
+                    .delete('/api/blog/delete/9c463b01-a9ef-424d-b140-d640115d1828')
                     .set('Authorization', `Bearer ${token}`)
                     .expect(200)
                     .end(done);
