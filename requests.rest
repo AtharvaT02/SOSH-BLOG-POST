@@ -1,0 +1,55 @@
+//create blog request
+
+POST http://localhost:3000/api/blog/create
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiYWUzNGRkOWEtZmI3NS00ODE3LThiMTYtZDc4Zjg1NThlNmZmIn0sImlhdCI6MTY3NTUwMDkyNiwiZXhwIjoxNjc1ODYwOTI2fQ.M1gQuqXlPeZa9_uiRbpIW7X6iAh2x4pCZ7R8B1D8LE4
+Content-Type: application/json
+
+{
+    "title": "Blog 1",
+    "description": "Blog 1 content"
+}
+
+###
+//Get all blog request
+
+GET http://localhost:3000/api/blog/all
+
+###
+//SignUp user
+
+POST http://localhost:3000/api/user/signup
+Content-Type: application/json
+    
+    {   "name": "User2" ,"email": "email2@test.com", "password": "password1" }
+
+###
+//Login user
+
+POST http://localhost:3000/api/user/login
+Content-Type: application/json
+    
+    {   "email": "email1@test.com", "password": "password1" }
+
+###
+//Get update blog
+
+PUT http://localhost:3000/api/blog/update/b6afc231-351c-4839-8665-d70733ed4ad4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNzE1MWY2OGYtYjIwZi00NDA4LTgxOTItZjIxOGUwZjNjYTdiIn0sImlhdCI6MTY3NTUwMzUzNywiZXhwIjoxNjc1ODYzNTM3fQ.t5azyfOXS3dFmBXVyIcWJtasABNPu7WLrfNutRFW6cQ
+Content-Type: application/json
+
+{
+    "title": "Blog 1",
+    "description": "Blog 1 content updated"
+}
+
+###
+//Get delete blog
+
+Delete http://localhost:3000/api/blog/delete/b6afc231-351c-4839-8665-d70733ed4ad4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiYWUzNGRkOWEtZmI3NS00ODE3LThiMTYtZDc4Zjg1NThlNmZmIn0sImlhdCI6MTY3NTUwMDkyNiwiZXhwIjoxNjc1ODYwOTI2fQ.M1gQuqXlPeZa9_uiRbpIW7X6iAh2x4pCZ7R8B1D8LE4
+Content-Type: application/json
+
+{
+    "title": "Blog 1",
+    "description": "Blog 1 content updated"
+}
