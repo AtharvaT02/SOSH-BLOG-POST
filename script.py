@@ -8,3 +8,5 @@ def open_brave():
         return
 
     webbrowser.get("brave").open("https://www.google.com/")
+
+open_brave()
